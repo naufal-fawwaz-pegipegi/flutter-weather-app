@@ -2,26 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:web_app_test/weather/domain/cubit/weather_cubit.dart';
 
-class WeatherPage extends StatefulWidget {
+class WeatherPage3 extends StatefulWidget {
   final String title;
 
-  WeatherPage({Key? key, required this.title});
+  WeatherPage3({Key? key, required this.title});
 
   @override
   State createState() => _WeatherPageState();
 }
 
-class _WeatherPageState extends State<WeatherPage> {
+class _WeatherPageState extends State<WeatherPage3> {
   late TextEditingController _controller;
-  String _main = "";
-  String _desc = "";
-  String _temp = "";
-  String _loc = "";
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-  }
 
   @override
   void initState() {
@@ -34,18 +25,10 @@ class _WeatherPageState extends State<WeatherPage> {
     _controller.dispose();
     super.dispose();
   }
-  
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<WeatherCubit, WeatherState>(
-      listener: (context, state) {
-        if (state is WeatherError) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text(state.message)),
-          );
-        }
-      },
+    return BlocBuilder<WeatherCubit, WeatherState>(
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
