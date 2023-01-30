@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
-import 'package:web_app_test/weather/data/models/geocoding_response.dart';
-import 'package:web_app_test/weather/data/network/api.dart';
-import 'package:web_app_test/weather/data/models/weather_response.dart';
+import 'package:web_app_test/data/models/geocoding_response.dart';
+import 'package:web_app_test/data/network/api.dart';
+import 'package:web_app_test/data/models/weather_response.dart';
 part 'api_client.g.dart';
 
 @RestApi(baseUrl: Api.openWeatherApiUrl)

@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:web_app_test/weather/domain/usecases/weather_factory.dart';
-import 'package:web_app_test/weather/presentation/weather/weather_state.dart';
+import 'package:web_app_test/domain/usecases/weather_factory.dart';
+import 'package:web_app_test/presentation/weather/weather_state.dart';
 
 class WeatherCubit extends Cubit<WeatherState> {
   WeatherCubit() : super(WeatherInitialState());

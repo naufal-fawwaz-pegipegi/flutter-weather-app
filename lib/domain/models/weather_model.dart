@@ -1,4 +1,4 @@
-import 'package:web_app_test/weather/data/models/weather_response.dart';
+import 'package:web_app_test/data/models/weather_response.dart';
 
 class WeatherModel {
   String? temp;
@@ -6,12 +6,11 @@ class WeatherModel {
   String? desc;
   String? loc;
 
-  WeatherModel({
-    required this.temp,
-    required this.main,
-    required this.desc,
-    required this.loc
-  });
+  WeatherModel(
+      {required this.temp,
+      required this.main,
+      required this.desc,
+      required this.loc});
 
   WeatherModel.fromResponse(WeatherResponse res) {
     this.temp = _convertToCelsius(res.main?.temp);
@@ -20,8 +19,8 @@ class WeatherModel {
     this.loc = '${res.name}, ${res.sys?.country}';
   }
 
-  String _convertToCelsius(double? kelvin){
-    if(kelvin != null){
+  String _convertToCelsius(double? kelvin) {
+    if (kelvin != null) {
       double celsius = kelvin - 273.15;
       return celsius.toString();
     }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:web_app_test/weather/presentation/weather/weather_cubit.dart';
-import 'package:web_app_test/weather/presentation/weather/weather_state.dart';
+import 'package:web_app_test/presentation/weather/weather_cubit.dart';
+import 'package:web_app_test/presentation/weather/weather_state.dart';
 
 class WeatherPage extends StatefulWidget {
   final String title;
