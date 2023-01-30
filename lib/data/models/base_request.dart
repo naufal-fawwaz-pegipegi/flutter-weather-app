@@ -1,5 +1,4 @@
 import 'package:web_app_test/data/network/api.dart';
-import 'package:web_app_test/data/network/service.dart';
 
 class BaseRequest {
   final String appId = Api.apiKey;
