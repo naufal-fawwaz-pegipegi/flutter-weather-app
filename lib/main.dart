@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:web_app_test/weather/domain/cubit/weather_cubit.dart';
-import 'package:web_app_test/weather/presentation/weather_page.dart';
+import 'package:web_app_test/weather/presentation/weather/weather_cubit.dart';
+import 'package:web_app_test/weather/presentation/weather/weather_page.dart';
 
 void main() {
   runApp(MyApp());

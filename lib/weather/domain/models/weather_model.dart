@@ -1,4 +1,4 @@
-import 'package:web_app_test/weather/data/weather_response.dart';
+import 'package:web_app_test/weather/data/models/weather_response.dart';
 
 class WeatherModel {
   String? temp;

@@ -1,10 +1,10 @@
 import 'package:dio/dio.dart';
-import 'package:web_app_test/weather/data/base_request.dart';
-import 'package:web_app_test/weather/data/geocoding_request.dart';
-import 'package:web_app_test/weather/data/geocoding_response.dart';
-import 'package:web_app_test/weather/data/weather_request.dart';
-import 'package:web_app_test/weather/data/weather_response.dart';
-import 'package:web_app_test/weather/network/api_client.dart';
+import 'package:web_app_test/weather/data/models/base_request.dart';
+import 'package:web_app_test/weather/data/models/geocoding_request.dart';
+import 'package:web_app_test/weather/data/models/geocoding_response.dart';
+import 'package:web_app_test/weather/data/models/weather_request.dart';
+import 'package:web_app_test/weather/data/models/weather_response.dart';
+import 'package:web_app_test/weather/data/network/api_client.dart';
 
 class Service {
   ApiClient _client = ApiClient(Dio(BaseOptions(contentType: "application/json")));

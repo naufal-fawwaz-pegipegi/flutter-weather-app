@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:web_app_test/weather/domain/cubit/weather_cubit.dart';
+import 'package:web_app_test/weather/presentation/weather/weather_cubit.dart';
+import 'package:web_app_test/weather/presentation/weather/weather_state.dart';
 
 class WeatherPage extends StatefulWidget {
   final String title;
@@ -13,11 +14,6 @@ class WeatherPage extends StatefulWidget {
 
 class _WeatherPageState extends State<WeatherPage> {
   late TextEditingController _controller;
-  String _main = "";
-  String _desc = "";
-  String _temp = "";
-  String _loc = "";
-
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -34,13 +30,12 @@ class _WeatherPageState extends State<WeatherPage> {
     _controller.dispose();
     super.dispose();
   }
-  
 
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<WeatherCubit, WeatherState>(
       listener: (context, state) {
-        if (state is WeatherError) {
+        if (state is WeatherErrorState) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text(state.message)),
           );
@@ -82,9 +77,9 @@ class _WeatherPageState extends State<WeatherPage> {
                   ],
                 ),
                 SizedBox(height: 24),
-                if (state is WeatherLoading) ...[
+                if (state is WeatherLoadingState) ...[
                   CircularProgressIndicator(),
-                ] else if (state is WeatherSuccess) ...[
+                ] else if (state is WeatherSuccessState) ...[
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[

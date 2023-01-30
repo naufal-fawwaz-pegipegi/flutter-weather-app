@@ -1,5 +1,5 @@
-import 'package:web_app_test/weather/network/api.dart';
-import 'package:web_app_test/weather/network/service.dart';
+import 'package:web_app_test/weather/data/network/api.dart';
+import 'package:web_app_test/weather/data/network/service.dart';
 
 class BaseRequest {
   final String appId = Api.apiKey;

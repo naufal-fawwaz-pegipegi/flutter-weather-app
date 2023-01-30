@@ -1,4 +1,4 @@
-import 'package:web_app_test/weather/data/base_request.dart';
+import 'package:web_app_test/weather/data/models/base_request.dart';
 
 class WeatherRequest extends BaseRequest {
   final String lat;

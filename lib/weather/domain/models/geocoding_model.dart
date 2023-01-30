@@ -1,4 +1,4 @@
-import 'package:web_app_test/weather/data/geocoding_response.dart';
+import 'package:web_app_test/weather/data/models/geocoding_response.dart';
 
 class GeocodingModel {
   double? lat;

@@ -1,10 +1,10 @@
-import 'package:web_app_test/weather/data/geocoding_request.dart';
-import 'package:web_app_test/weather/network/service.dart';
-import 'package:web_app_test/weather/data/weather_request.dart';
-import 'package:web_app_test/weather/domain/geocoding_model.dart';
-import 'package:web_app_test/weather/domain/geocoding_repo.dart';
-import 'package:web_app_test/weather/domain/weather_model.dart';
-import 'package:web_app_test/weather/domain/weather_repo.dart';
+import 'package:web_app_test/weather/data/models/geocoding_request.dart';
+import 'package:web_app_test/weather/data/network/service.dart';
+import 'package:web_app_test/weather/data/models/weather_request.dart';
+import 'package:web_app_test/weather/domain/models/geocoding_model.dart';
+import 'package:web_app_test/weather/domain/repository/geocoding_repo.dart';
+import 'package:web_app_test/weather/domain/models/weather_model.dart';
+import 'package:web_app_test/weather/domain/repository/weather_repo.dart';
 
 class WeatherFactory {
   Future<WeatherModel> getWeather(String location) async {

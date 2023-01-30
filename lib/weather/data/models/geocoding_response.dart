@@ -1,4 +1,4 @@
-import 'package:web_app_test/weather/data/base_response.dart';
+import 'package:web_app_test/weather/data/models/base_response.dart';
 
 class GeocodingResponse extends BaseResponse {
   String? name;
